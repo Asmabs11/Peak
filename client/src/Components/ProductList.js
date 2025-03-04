@@ -19,13 +19,13 @@ const ProductList = () => {
     };
 
     return (
-        <>
+        <div style={{display: 'flex', flexWrap: 'wrap', justifyContent: 'space-around'}}>
             {products && products.map((el) => <ProductCard el={el} key={el._id} />)}
             {user && user.isAdmin &&(
              <button onClick={redirectAdd}>Add New Product</button>
             )}
     
-        </>
+        </div>
     );
 };
 

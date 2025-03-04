@@ -70,7 +70,10 @@ const addProduct = () => {
 
   return (
     <div className="category-page">
-      <button onClick={()=>addProduct()}>Add new product</button>
+      {user &&
+      
+      user.isAdmin? (<button onClick={()=>addProduct()}>Add new product</button>): null}
+      
       <h2>{categoryName.toUpperCase()}</h2>
       <div className="product-list">
         {products && products.length > 0 ? (

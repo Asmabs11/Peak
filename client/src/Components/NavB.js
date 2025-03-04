@@ -60,7 +60,7 @@ const NavB = () => {
               <NavDropdown.Item as={Link} to="/category/women">
                 Women
               </NavDropdown.Item>
-              <NavDropdown.Item as={Link} to="/category/kids">
+              <NavDropdown.Item as={Link} to="/category/Kids">
                 Kids
               </NavDropdown.Item>
               <NavDropdown.Item as={Link} to="/category/accessories">

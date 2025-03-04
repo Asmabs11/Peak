@@ -11,7 +11,7 @@ const Header = () => {
     <header className="hero-section">
       <div className="video-container">
         <video autoPlay muted loop className="bg-video">
-          <source src="/video/sport.mp4" type="video/mp4" />
+          <source src="/video/perform.mp4" type="video/mp4" />
         </video>
         <div className="video-overlay"></div>
       </div>

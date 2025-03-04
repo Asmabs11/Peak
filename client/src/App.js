@@ -49,9 +49,11 @@ function App() {
           <Route index element={<DashboardAdmin />} />
         </Route>
       </Routes>
-
       <Footer />
+
     </div>
+ 
+
   );
 }
 

@@ -31,7 +31,7 @@ const ProductCard = ({ el }) => {
   };
 
   return (
-    <div className="product-card">
+    <div className="product-image" style={{marginLeft: "50px"}}>
       <img src={el.image} alt={el.name} className="product-image" />
       <h3>{el.name}</h3>
       <p>{el.description}</p>
