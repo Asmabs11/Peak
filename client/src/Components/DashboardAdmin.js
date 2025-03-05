@@ -22,7 +22,7 @@ const DashboardAdmin = () => {
         <div className="sidebar">
           <h2>Dashboard Overview</h2>
 
-          <div className="sidebar-section">
+          <div className="sidebar-Admins">
             <Link to={"/adminDashboard/admins"}>
               <h3>Admins ({admins.length})</h3>
             </Link>
@@ -33,7 +33,7 @@ const DashboardAdmin = () => {
             </ul>
           </div>
           
-          <div className="sidebar-section">
+          <div className="sidebar-Products">
             <Link to={"/adminDashboard/product"}>
               <h3>Products ({products.length})</h3>
             </Link>
@@ -44,7 +44,7 @@ const DashboardAdmin = () => {
             </ul>
           </div>
 
-          <div className="sidebar-section">
+          <div className="sidebar-Orders">
             <h3>Orders ({orders.length})</h3>
             <ul>
               {orders.map((order) => (

@@ -59,7 +59,7 @@ const CategoryPage = () => {
     quantity: quantities[product._id] || 1,
   };
 
-  console.log("Sending Order Data:", orderData); // Debugging
+  console.log("Sending Order Data:", orderData); 
 
   dispatch(addToCard(orderData));
 };

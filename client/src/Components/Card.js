@@ -15,8 +15,8 @@ const Card = () => {
     };
 
     return (
-        <div className="cart-container">
-            <h2>Shopping Cart</h2>
+        <div className="shopping-card">
+            <h2>Shopping Card</h2>
             {card.length === 0 ? (
                 <p>Your card is empty</p>
             ) : (

@@ -38,7 +38,7 @@ const NavB = () => {
           onClick={() => navigate("/")}
           style={{ cursor: "pointer" }}
         >
-          <img src={peak} alt="Logo" className="website-logo" />
+          <img src={peak} alt="Logo" className="website-logo"  />
 
           <span className="website-name">
             P<span className="highlight">eak</span> P
