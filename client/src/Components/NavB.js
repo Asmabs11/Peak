@@ -24,12 +24,9 @@ const NavB = () => {
 
   const user = useSelector((state) => state.user);
   const card = useSelector((state) => state.card) || [];
-  const totalItems =
-    card?.length > 0
-      ? card
-          .filter((item) => item && item.quantity)
-          .reduce((acc, item) => acc + (item.quantity || 0), 0)
-      : 0;
+
+  // Calculate total cart items
+  const totalItems = card.reduce((acc, item) => acc + (item?.quantity || 0), 0);
 
   return (
     <Navbar expand="lg" className="custom-navbar">
@@ -38,7 +35,7 @@ const NavB = () => {
           onClick={() => navigate("/")}
           style={{ cursor: "pointer" }}
         >
-          <img src={peak} alt="Logo" className="website-logo"  />
+          <img src={peak} alt="Logo" className="website-logo" />
 
           <span className="website-name">
             P<span className="highlight">eak</span> P
@@ -60,7 +57,7 @@ const NavB = () => {
               <NavDropdown.Item as={Link} to="/category/women">
                 Women
               </NavDropdown.Item>
-              <NavDropdown.Item as={Link} to="/category/Kids">
+              <NavDropdown.Item as={Link} to="/category/kids">
                 Kids
               </NavDropdown.Item>
               <NavDropdown.Item as={Link} to="/category/accessories">
@@ -73,12 +70,18 @@ const NavB = () => {
             {user ? (
               <>
                 <Nav.Link>
-                  <button onClick={logoutUser} className="navbar-auth-btn">
+                  <button
+                    onClick={logoutUser}
+                    className="navbar-auth-btn"
+                    aria-label="Logout"
+                  >
                     Logout
                   </button>
                 </Nav.Link>
 
-                <Nav.Link>{user.fullName}</Nav.Link>
+                <Nav.Link className="user-name">
+                  {user?.fullName}
+                </Nav.Link>
               </>
             ) : (
               <>

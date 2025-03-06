@@ -1,10 +1,10 @@
-import { useNavigate } from "react-router-dom"; 
+import { useNavigate } from "react-router-dom";
 
 const Header = () => {
-  const navigate = useNavigate(); 
+  const navigate = useNavigate();
 
-  const navig = () => {
-    navigate("/home"); 
+  const navigateToHome = () => {
+    navigate("/home");
   };
 
   return (
@@ -17,7 +17,12 @@ const Header = () => {
       </div>
 
       <div className="hero-content">
-        <button className="fit-button" onClick={navig}>
+        <button
+          className="fit-button header-btn"
+          onClick={navigateToHome}
+          aria-label="Go to Home"
+          style={{ cursor: "pointer" }}
+        >
           Welcome To Peak Perform
         </button>
       </div>

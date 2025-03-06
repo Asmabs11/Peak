@@ -145,21 +145,7 @@ body {
   align-items: center;
 }
 
-button {
-  background: linear-gradient(45deg, #080808, #379bc9);
-  color: rgb(5, 5, 5);
-  border: none;
-  padding: 0.8rem 1.5rem;
-  border-radius: 8px;
-  cursor: pointer;
-  font-weight: bold;
-  transition: background 0.3s ease, transform 0.2s ease;
-}
 
-button:hover {
-  background: linear-gradient(45deg, #568abb, #588eb9);
-  transform: scale(1.05);
-}
 
 .cart-icon {
   font-size: 1.5rem;
@@ -231,18 +217,6 @@ strong {
   border-radius: 5px;
   text-align: center;
 }
-button {
-  background: none;
-  border: none;
-  font-size: 1.5rem;
-  color: #24b7db;
-  cursor: pointer;
-  transition: color 0.3s ease-in-out;
-}
-button:hover {
-  color: #1761eb;
-
-}
 
 .product-card {
   background: linear-gradient(135deg, black, gray, lightblue);
@@ -282,7 +256,10 @@ footer {
   backdrop-filter: blur(10px);
   width: 100%;
   position: relative;
-  bottom: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%
+  
     
 }
 
@@ -349,39 +326,14 @@ footer {
 
 
 .hero-content {
-  position: absolute;
-  bottom: 30px; 
-  left: 50%;
-  transform: translateX(-50%);
+  position: relative;
   width: 100%;
+  min-height: 100vh; /* Make it take the full viewport height */
+  display: flex;
+  align-items: center;
+  justify-content: center;
   text-align: center;
-}
-
-
-.fit-button {
-  display: inline-block;
-  padding: 14px 30px;
-  font-size: 1.5rem;
-  font-weight: bold;
-  color: white;
-  background: linear-gradient(45deg, #065494, #17ffff);
-  border: none;
-  border-radius: 50px; 
-  cursor: pointer;
-  transition: all 0.4s ease;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
-}
-
-
-.fit-button:hover {
-  background: linear-gradient(45deg, #007bff, #6610f2);
-  transform: scale(1.1); /* Slight zoom effect */
-  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.5);
-}
-.fit-button:active {
-  transform: scale(0.95);
+  overflow: hidden;
 }
 
 @media (max-width: 768px) {
@@ -592,7 +544,7 @@ button:hover {
 
 /* 🔷 Dashboard Container */
 .dashboard-container {
-  display: flex;
+  display: table;
   width: 80%;  /* Adjust the width for a bigger container */
   height: 80vh;  /* Adjust the height as per your need */
   background: linear-gradient(135deg, black, gray, lightblue);
@@ -600,9 +552,9 @@ button:hover {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 
-/* 🔹 Sidebar */
+
 .sidebar {
-  width: 300px;  /* Increased sidebar width */
+  width: 300px;  
   background: linear-gradient(135deg, black, gray, lightblue);
   color: white;
   padding: 20px;
@@ -614,9 +566,9 @@ button:hover {
   border-radius: 10px 0 0 10px;
 }
 
-/* Sidebar Title */
+
 .sidebar h2 {
-  font-size: 1.8rem;  /* Increased title size */
+  font-size: 1.8rem;  
   text-align: center;
   font-weight: 600;
   margin-bottom: 10px;
@@ -624,6 +576,7 @@ button:hover {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   letter-spacing: 1px;
+  
 }
 
 
@@ -683,12 +636,12 @@ button:hover {
   padding: 40px;
   background: linear-gradient(135deg, black, gray, lightblue);
   text-align: center;
-  border-radius: 0 10px 10px 0;  /* Rounded corners on the right side */
+  border-radius: 0 10px 10px 0; 
 }
 
-/* Dashboard Heading */
+
 .dashboard-admin h1 {
-  font-size: 2.5rem;  /* Increased heading size */
+  font-size: 2.5rem;  
   font-weight: bold;
   color: #080808;
   margin-bottom: 20px;
@@ -706,11 +659,10 @@ button:hover {
   border-radius: 2px;
 }
 
-/* Responsive Design */
 @media (max-width: 768px) {
   .dashboard-container {
     flex-direction: column;
-    width: 95%;  /* Adjust width for smaller screens */
+    width: 95%; 
   }
 
   .sidebar {
@@ -727,3 +679,131 @@ button:hover {
   }
 }
 
+
+
+.login-container {
+  color:#f3f7f8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh; 
+  background: linear-gradient(to right, rgba(128, 128, 128, 0.7), rgba(173, 216, 230, 0.7), rgba(255, 182, 193, 0.7));
+  
+}
+
+.login-box {
+  background: linear-gradient(135deg, black, gray, lightblue);
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(236, 231, 231, 0.1);
+  text-align: center;
+ 
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #14b0c57e;
+  border-radius: 5px;
+  
+}
+
+.header-btn {
+  background: linear-gradient(90deg, #ff7e5f, #feb47b);
+  color: white;
+  padding: 12px 24px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.header-btn:hover {
+  background: linear-gradient(90deg, #feb47b, #ff7e5f);
+  transform: scale(1.1);
+}
+
+.navbar-auth-btn {
+  background-color: #41a8e4;
+  color: white;
+  padding: 8px 16px;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.navbar-auth-btn:hover {
+  background-color: #0a746e;
+  transform: scale(1.05);
+}
+
+.header-btn {
+  background: linear-gradient(90deg, #2fc3f0, #d61636);
+  color: white;
+  padding: 12px 24px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.header-btn:hover {
+  background: linear-gradient(90deg, #44c6ee, #f10473);
+  transform: scale(1.1);
+}
+
+.navbar-auth-btn {
+  background-color: #41a8e4;
+  color: white;
+  padding: 8px 16px;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.navbar-auth-btn:hover {
+  background-color: #0a746e;
+  transform: scale(1.05);
+}
+
+
+/* 🔷 Main Dashboard Area */
+.dashboard-admin {
+  flex: 10;
+  padding: 40px;
+  background: white;
+  text-align: center;
+  border-radius: 0 10px 10px 0;  /* Rounded corners on the right side */
+}
+
+/* Dashboard Heading */
+.dashboard-admin h1 {
+  font-size: 2.5rem;  /* Increased heading size */
+  font-weight: bold;
+  color: transparent;  /* Make the text transparent to show gradient */
+  margin-bottom: 20px;
+  letter-spacing: 1px;
+  position: relative;
+  background: linear-gradient(to right, #39cbf0, #ff6ec7, #ff7b00);  /* Creative Gradient */
+  -webkit-background-clip: text;  /* Clip the gradient to the text */
+  background-clip: text;  /* For non-webkit browsers */
+}
+
+.dashboard-admin h1::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 4px;
+  background: #ff8c00;
+  margin: 8px auto;
+  border-radius: 2px;
+}
